@@ -1,0 +1,5 @@
+package com.test.hibernate.test.hibernate;
+
+public class Book {
+
+}

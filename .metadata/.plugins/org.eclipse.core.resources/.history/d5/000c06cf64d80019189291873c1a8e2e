@@ -1,0 +1,5 @@
+package com.test.hibernate.Example;
+
+public class CustomerService {
+
+}

@@ -1,0 +1,2 @@
+Thu Sep 12 2019 10:35:24 AM - CloudFoundryServer.modifyModules(...): add: { AjaxDatabaseExample [org.eclipse.jst.jee.server:AjaxDatabaseExample/jst.web]} remove: {}
+Thu Sep 12 2019 10:35:25 AM - CloudFoundryServerBehaviour.publishModule(...): ADDED { AjaxDatabaseExample [org.eclipse.jst.jee.server:AjaxDatabaseExample/jst.web]}

@@ -1,0 +1,27 @@
+package com.test.hibernate.test.hibernate;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+       EntityManagerFactory emf=Persistence.createEntityManagerFactory("test1");
+       EntityManager em=emf.createEntityManager();
+       Book b=em.find(Book.class,1);
+       System.out.println(b);
+       Book b1=new Book();
+       b1.setBookid(2);
+       b1.setBauthor("astiv");
+       b1.setBname("HungryTide");
+       b1.setBprice("500");
+       em.getTransaction().begin();
+       em.persist(b1);
+       em.getTransaction().commit();
+       
+       em.persist(b1);
+       System.out.println("data added are");
+       System.out.println(b1);
+    }
+}

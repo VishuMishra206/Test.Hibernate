@@ -1,0 +1,31 @@
+package com.test.hibernate.Example;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+
+import com.test.hibernate.test.hibernate.Book;
+
+public class CustomerService 
+{
+
+    EntityManagerFactory emf=Persistence.createEntityManagerFactory("test1");
+    EntityManager em=emf.createEntityManager();
+    Student b=em.find(Student.class,1);
+    System.out.println(b);
+    Student b1=new Student();
+    b1.setSname("vishu");
+    b1.setSroll(2);
+    b1.setGender("female");
+   
+    
+    em.getTransaction().begin();
+    em.persist(b1);
+    em.getTransaction().commit();
+    
+    em.persist(b1);
+    System.out.println("data added are");
+    System.out.println(b1);
+    
+	
+}

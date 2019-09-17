@@ -1,0 +1,19 @@
+package com.test.hibernate.Example;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+
+import com.test.hibernate.test.hibernate.Book;
+
+public class CustomerService 
+{
+
+    EntityManagerFactory emf=Persistence.createEntityManagerFactory("test1");
+    EntityManager em=emf.createEntityManager();
+    Student b=em.find(Student.class,1);
+    System.out.println(b);
+    Student b1=new Student();
+    
+	
+}

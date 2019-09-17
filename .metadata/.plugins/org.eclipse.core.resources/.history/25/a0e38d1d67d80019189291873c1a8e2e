@@ -1,0 +1,36 @@
+package com.test.hibernate.Example;
+import javax.persistence.*;
+
+
+@Entity
+@Table(name="Student")
+public class Student 
+{
+  private String sname;
+  private int sroll;
+  private String gender;
+  
+@Override
+public String toString() {
+	return "Student [sname=" + sname + ", sroll=" + sroll + ", gender=" + gender + "]";
+}
+public String getSname() {
+	return sname;
+}
+public void setSname(String sname) {
+	this.sname = sname;
+}
+public int getSroll() {
+	return sroll;
+}
+public void setSroll(int sroll) {
+	this.sroll = sroll;
+}
+public String getGender() {
+	return gender;
+}
+public void setGender(String gender) {
+	this.gender = gender;
+}
+  
+}
